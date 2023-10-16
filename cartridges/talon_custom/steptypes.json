@@ -1,0 +1,32 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id": "custom.talon",
+                "@supports-parallel-execution": "false",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "false",
+                "description": "Checks previously ran chunk order export job for errors and surfaces them in the Business Manager",
+                "module": "talon_custom/cartridge/scripts/jobs/GetTalonCampaignRules.js",
+                "function": "execute",
+                "transactional": "false",
+                "timeout-in-seconds": "900",
+                "parameters": {
+                    "parameter": []
+                },
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when the step failed with an error."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when the step finished successfully."
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
